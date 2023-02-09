@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C80B921A6F3F58F76C31292 /* libPods-DIDReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-DIDReact.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9679C03D291031CE00BB3565 /* QrModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679C03B291031CE00BB3565 /* QrModule.m */; };
+		9679C03E291031CE00BB3565 /* QrModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679C03C291031CE00BB3565 /* QrModule.swift */; };
+		9679C042291060DA00BB3565 /* TransactionInfoConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679C041291060DA00BB3565 /* TransactionInfoConverter.swift */; };
+		9679C0462910927A00BB3565 /* CodableConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679C0452910927A00BB3565 /* CodableConverter.swift */; };
+		9679C04D2911E9DF00BB3565 /* QRAuthenticationCodeReadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679C04C2911E9DF00BB3565 /* QRAuthenticationCodeReadError.swift */; };
+		B761CCD4290C741D00F4666F /* OtpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761CCCD290C741A00F4666F /* OtpModule.swift */; };
+		B761CCD5290C741D00F4666F /* AccountModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761CCCE290C741B00F4666F /* AccountModule.swift */; };
+		B761CCD6290C741D00F4666F /* DIDModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B761CCCF290C741B00F4666F /* DIDModule.m */; };
+		B761CCD7290C741D00F4666F /* AccountModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B761CCD0290C741B00F4666F /* AccountModule.m */; };
+		B761CCD8290C741D00F4666F /* OtpModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B761CCD1290C741C00F4666F /* OtpModule.m */; };
+		B761CCD9290C741D00F4666F /* DIDModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761CCD2290C741C00F4666F /* DIDModule.swift */; };
+		B761CCDA290C741D00F4666F /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761CCD3290C741C00F4666F /* Dictionary+JSON.swift */; };
+		B787D0C1291AC55F006BA549 /* PushModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B787D0C0291AC55F006BA549 /* PushModule.m */; };
+		B787D0C6291AF587006BA549 /* DetectIDSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B787D0C5291AF587006BA549 /* DetectIDSDK.m */; };
+		B787D0C8291AF901006BA549 /* DIDSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787D0C7291AF901006BA549 /* DIDSDK.swift */; };
+		B787D0CA291B057F006BA549 /* PushModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787D0C9291B057F006BA549 /* PushModule.swift */; };
+		B787D0CD291DA54F006BA549 /* TransactionDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787D0CC291DA54E006BA549 /* TransactionDelegateProtocol.swift */; };
+		B7D30527295B33CB00B5F771 /* appgate_core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D30523295B33C900B5F771 /* appgate_core.xcframework */; };
+		B7D30528295B33CB00B5F771 /* didm_sdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D30524295B33CA00B5F771 /* didm_sdk.xcframework */; };
+		B7D30529295B33CB00B5F771 /* appgate_sdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D30525295B33CA00B5F771 /* appgate_sdk.xcframework */; };
+		B7D3052A295B33CB00B5F771 /* didm_core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D30526295B33CB00B5F771 /* didm_core.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7C4C53E28F4797900CD1953 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		13B07F961A680F5B00A75B9A /* DIDReact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIDReact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DIDReact/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = DIDReact/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DIDReact/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DIDReact/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DIDReact/main.m; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-DIDReact-DIDReactTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DIDReact-DIDReactTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4392A12AC88292D35C810B /* Pods-DIDReact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIDReact.debug.xcconfig"; path = "Target Support Files/Pods-DIDReact/Pods-DIDReact.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-DIDReact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIDReact.release.xcconfig"; path = "Target Support Files/Pods-DIDReact/Pods-DIDReact.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-DIDReact-DIDReactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIDReact-DIDReactTests.debug.xcconfig"; path = "Target Support Files/Pods-DIDReact-DIDReactTests/Pods-DIDReact-DIDReactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-DIDReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DIDReact.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DIDReact/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-DIDReact-DIDReactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIDReact-DIDReactTests.release.xcconfig"; path = "Target Support Files/Pods-DIDReact-DIDReactTests/Pods-DIDReact-DIDReactTests.release.xcconfig"; sourceTree = "<group>"; };
+		9679C03B291031CE00BB3565 /* QrModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QrModule.m; path = didbridge/QrModule.m; sourceTree = "<group>"; };
+		9679C03C291031CE00BB3565 /* QrModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QrModule.swift; path = didbridge/QrModule.swift; sourceTree = "<group>"; };
+		9679C041291060DA00BB3565 /* TransactionInfoConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInfoConverter.swift; sourceTree = "<group>"; };
+		9679C0452910927A00BB3565 /* CodableConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodableConverter.swift; path = "../../../../react-native-didsdk-app/node_modules/tfp-did-mobile-sdk-detectid-plugin-react-native/ios/didbridge/converters/CodableConverter.swift"; sourceTree = "<group>"; };
+		9679C04C2911E9DF00BB3565 /* QRAuthenticationCodeReadError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAuthenticationCodeReadError.swift; sourceTree = "<group>"; };
+		B761CCCD290C741A00F4666F /* OtpModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OtpModule.swift; path = didbridge/OtpModule.swift; sourceTree = "<group>"; };
+		B761CCCE290C741B00F4666F /* AccountModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountModule.swift; path = didbridge/AccountModule.swift; sourceTree = "<group>"; };
+		B761CCCF290C741B00F4666F /* DIDModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DIDModule.m; path = didbridge/DIDModule.m; sourceTree = "<group>"; };
+		B761CCD0290C741B00F4666F /* AccountModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountModule.m; path = didbridge/AccountModule.m; sourceTree = "<group>"; };
+		B761CCD1290C741C00F4666F /* OtpModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OtpModule.m; path = didbridge/OtpModule.m; sourceTree = "<group>"; };
+		B761CCD2290C741C00F4666F /* DIDModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DIDModule.swift; path = didbridge/DIDModule.swift; sourceTree = "<group>"; };
+		B761CCD3290C741C00F4666F /* Dictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
+		B787D0C0291AC55F006BA549 /* PushModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PushModule.m; path = didbridge/PushModule.m; sourceTree = "<group>"; };
+		B787D0C4291AF574006BA549 /* DetectIDSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetectIDSDK.h; path = didbridge/DetectIDSDK.h; sourceTree = "<group>"; };
+		B787D0C5291AF587006BA549 /* DetectIDSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DetectIDSDK.m; path = didbridge/DetectIDSDK.m; sourceTree = "<group>"; };
+		B787D0C7291AF901006BA549 /* DIDSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DIDSDK.swift; path = didbridge/DIDSDK.swift; sourceTree = "<group>"; };
+		B787D0C9291B057F006BA549 /* PushModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PushModule.swift; path = didbridge/PushModule.swift; sourceTree = "<group>"; };
+		B787D0CC291DA54E006BA549 /* TransactionDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionDelegateProtocol.swift; path = didbridge/TransactionDelegateProtocol.swift; sourceTree = "<group>"; };
+		B7D30523295B33C900B5F771 /* appgate_core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = appgate_core.xcframework; sourceTree = "<group>"; };
+		B7D30524295B33CA00B5F771 /* didm_sdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = didm_sdk.xcframework; sourceTree = "<group>"; };
+		B7D30525295B33CA00B5F771 /* appgate_sdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = appgate_sdk.xcframework; sourceTree = "<group>"; };
+		B7D30526295B33CB00B5F771 /* didm_core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = didm_core.xcframework; sourceTree = "<group>"; };
+		B7F6E39528F0651A00571C59 /* DIDReact-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DIDReact-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C80B921A6F3F58F76C31292 /* libPods-DIDReact.a in Frameworks */,
+				B7D30529295B33CB00B5F771 /* appgate_sdk.xcframework in Frameworks */,
+				B7D30527295B33CB00B5F771 /* appgate_core.xcframework in Frameworks */,
+				B7D30528295B33CB00B5F771 /* didm_sdk.xcframework in Frameworks */,
+				B7D3052A295B33CB00B5F771 /* didm_core.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13B07FAE1A68108700A75B9A /* DIDReact */ = {
+			isa = PBXGroup;
+			children = (
+				B7C4C55628F4B72000CD1953 /* libs */,
+				B7C4C54528F47D4600CD1953 /* didbridge */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				B7F6E39528F0651A00571C59 /* DIDReact-Bridging-Header.h */,
+			);
+			name = DIDReact;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-DIDReact.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-DIDReact-DIDReactTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* DIDReact */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* DIDReact.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9679C040291060B500BB3565 /* converters */ = {
+			isa = PBXGroup;
+			children = (
+				9679C0452910927A00BB3565 /* CodableConverter.swift */,
+				B761CCD3290C741C00F4666F /* Dictionary+JSON.swift */,
+				9679C041291060DA00BB3565 /* TransactionInfoConverter.swift */,
+			);
+			name = converters;
+			path = didbridge/converters;
+			sourceTree = "<group>";
+		};
+		9679C04B2911E9DE00BB3565 /* errors */ = {
+			isa = PBXGroup;
+			children = (
+				9679C04C2911E9DF00BB3565 /* QRAuthenticationCodeReadError.swift */,
+			);
+			name = errors;
+			path = didbridge/errors;
+			sourceTree = "<group>";
+		};
+		B7C4C54528F47D4600CD1953 /* didbridge */ = {
+			isa = PBXGroup;
+			children = (
+				9679C04B2911E9DE00BB3565 /* errors */,
+				9679C040291060B500BB3565 /* converters */,
+				B787D0C4291AF574006BA549 /* DetectIDSDK.h */,
+				B787D0C5291AF587006BA549 /* DetectIDSDK.m */,
+				B787D0C7291AF901006BA549 /* DIDSDK.swift */,
+				9679C03B291031CE00BB3565 /* QrModule.m */,
+				9679C03C291031CE00BB3565 /* QrModule.swift */,
+				B761CCD0290C741B00F4666F /* AccountModule.m */,
+				B761CCCE290C741B00F4666F /* AccountModule.swift */,
+				B761CCCF290C741B00F4666F /* DIDModule.m */,
+				B761CCD2290C741C00F4666F /* DIDModule.swift */,
+				B761CCD1290C741C00F4666F /* OtpModule.m */,
+				B761CCCD290C741A00F4666F /* OtpModule.swift */,
+				B787D0C0291AC55F006BA549 /* PushModule.m */,
+				B787D0C9291B057F006BA549 /* PushModule.swift */,
+				B787D0CC291DA54E006BA549 /* TransactionDelegateProtocol.swift */,
+			);
+			name = didbridge;
+			sourceTree = "<group>";
+		};
+		B7C4C55628F4B72000CD1953 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				B7D30523295B33C900B5F771 /* appgate_core.xcframework */,
+				B7D30525295B33CA00B5F771 /* appgate_sdk.xcframework */,
+				B7D30526295B33CB00B5F771 /* didm_core.xcframework */,
+				B7D30524295B33CA00B5F771 /* didm_sdk.xcframework */,
+			);
+			name = libs;
+			path = libs;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-DIDReact.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-DIDReact.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-DIDReact-DIDReactTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-DIDReact-DIDReactTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13B07F861A680F5B00A75B9A /* DIDReact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DIDReact" */;
+			buildPhases = (
+				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
+				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				B7C4C53E28F4797900CD1953 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DIDReact;
+			productName = DIDReact;
+			productReference = 13B07F961A680F5B00A75B9A /* DIDReact.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DIDReact" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* DIDReact */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DIDReact/Pods-DIDReact-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DIDReact/Pods-DIDReact-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DIDReact/Pods-DIDReact-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DIDReact-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DIDReact/Pods-DIDReact-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DIDReact/Pods-DIDReact-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DIDReact/Pods-DIDReact-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9679C04D2911E9DF00BB3565 /* QRAuthenticationCodeReadError.swift in Sources */,
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				B761CCD9290C741D00F4666F /* DIDModule.swift in Sources */,
+				9679C03E291031CE00BB3565 /* QrModule.swift in Sources */,
+				B787D0CD291DA54F006BA549 /* TransactionDelegateProtocol.swift in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				B787D0C8291AF901006BA549 /* DIDSDK.swift in Sources */,
+				9679C0462910927A00BB3565 /* CodableConverter.swift in Sources */,
+				B787D0CA291B057F006BA549 /* PushModule.swift in Sources */,
+				B787D0C1291AC55F006BA549 /* PushModule.m in Sources */,
+				B761CCD6290C741D00F4666F /* DIDModule.m in Sources */,
+				B761CCD5290C741D00F4666F /* AccountModule.swift in Sources */,
+				B761CCD7290C741D00F4666F /* AccountModule.m in Sources */,
+				9679C03D291031CE00BB3565 /* QrModule.m in Sources */,
+				B761CCDA290C741D00F4666F /* Dictionary+JSON.swift in Sources */,
+				B787D0C6291AF587006BA549 /* DetectIDSDK.m in Sources */,
+				B761CCD4290C741D00F4666F /* OtpModule.swift in Sources */,
+				B761CCD8290C741D00F4666F /* OtpModule.m in Sources */,
+				9679C042291060DA00BB3565 /* TransactionInfoConverter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-DIDReact.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MBXZA6Z65J;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MBXZA6Z65J;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Flipper-DoubleConversion/Frameworks\"",
+					"\"${PODS_ROOT}/Flipper-Glog/Frameworks\"",
+					"\"${PODS_ROOT}/OpenSSL-Universal/Frameworks\"",
+					"\"${PODS_ROOT}/hermes-engine/destroot/Library/Frameworks/universal\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-DoubleConversion\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-Glog\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine\"",
+					"$(PROJECT_DIR)/DIDReact/libs",
+					"$(PROJECT_DIR)/DIDReact",
+				);
+				INFOPLIST_FILE = DIDReact/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DID React";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appgate.plugin.reactnative;
+				PRODUCT_NAME = DIDReact;
+				PROVISIONING_PROFILE_SPECIFIER = com.appgate.plugin.reactnative_Development;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.appgate.plugin.reactnative_Development;
+				SWIFT_OBJC_BRIDGING_HEADER = "DIDReact-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-DIDReact.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MBXZA6Z65J;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MBXZA6Z65J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/hermes-engine/destroot/Library/Frameworks/universal\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine\"",
+					"$(PROJECT_DIR)/DIDReact/libs",
+					"$(PROJECT_DIR)/DIDReact",
+				);
+				INFOPLIST_FILE = DIDReact/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DID React";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appgate.plugin.reactnative;
+				PRODUCT_NAME = DIDReact;
+				PROVISIONING_PROFILE_SPECIFIER = com.appgate.plugin.reactnative_Development;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.appgate.plugin.reactnative_Appstore;
+				SWIFT_OBJC_BRIDGING_HEADER = "DIDReact-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DIDReact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DIDReact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

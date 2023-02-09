@@ -258,8 +258,8 @@ public class HmsMessageServiceImpl extends HmsMessageService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        Map<String, String> data = message.getDataOfMap();
-        appgateMessagingModule.onMessageReceived(getApplicationContext(), remoteMessage);        
+        Map<String, String> data = remoteMessage.getDataOfMap();
+        appgateMessagingModule.onMessageReceived(getApplicationContext(), data);        
     }
 }
 

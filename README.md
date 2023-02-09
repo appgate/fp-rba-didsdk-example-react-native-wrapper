@@ -448,7 +448,7 @@ To enable the use of Push Notifications (Push Authentication, Push Alert) follow
 }
 ```
 
-- From the methods `didFinishLaunchingWithOptions` of `AppDelegate` call this function:
+- From the method `didFinishLaunchingWithOptions` of `AppDelegate` call this function:
 
 ``` 
 [[DetectIDSDK sdk] registerForRemoteNotifications: launchOptions];
@@ -466,13 +466,14 @@ This function will trigger the request for Push permission and will handle the r
 
  ``` java
  public class MainApplication extends Application implements ReactApplication {
-    	@Override
+    	
+        @Override
     	public void onCreate() {
-        	super.onCreate();
-		FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
-            	if (!task.isSuccessful()) {
-                	return;
-            	}
+            super.onCreate();
+		    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+            if (!task.isSuccessful()) {
+             	return;
+            }
 	        String token = task.getResult();	    
         });
  }
@@ -484,15 +485,16 @@ This function will trigger the request for Push permission and will handle the r
 
  ```java
  public class MainApplication extends Application implements ReactApplication { 
-    	@Override
+    	
+        @Override
     	public void onCreate() {
-        	super.onCreate();
-		FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
-            	if (!task.isSuccessful()) {
-                	return;
-            	}
+            super.onCreate();
+		    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+            if (!task.isSuccessful()) {
+            	return;
+            }
 	        String token = task.getResult();
-		registerActivityLifecycleCallbacks(new DIDActivityLifecycle());
+		    registerActivityLifecycleCallbacks(new DIDActivityLifecycle());
         });
  }
  ...
@@ -500,24 +502,25 @@ This function will trigger the request for Push permission and will handle the r
 
 3. In `MainActivity` call `onCreate` method from `MainActivityDelegate` before `super.onCreate(savedInstanceState);` the
    following Method to pass TransactionInfo data to Main ReactComponent through extras in intent passing `ReactActivity:
-
+   
  ``` java
 import static com.appgate.plugin.reactnative.util.LogConstants.RN_TRANSACTION_INFO;
 import static com.appgate.plugin.reactnative.util.LogConstants.RN_TYPE_PUSH;
 
  public class MainActivity extends ReactActivity {
- 	public static class MainActivityDelegate extends ReactActivityDelegate {
+ 	
+    public static class MainActivityDelegate extends ReactActivityDelegate {
 		ReactActivity mActivity;
         private Bundle mInitialProps = null;
 		
 		public MainActivityDelegate(ReactActivity activity, String mainComponentName) {
-            		super(activity, mainComponentName);
-		        mActivity = activity;
-        	}
+            super(activity, mainComponentName);
+		    mActivity = activity;
+        }
 	
     	@Override
 		protected void onCreate(Bundle savedInstanceState) {
-		 Bundle extras = mActivity.getIntent().getExtras();
+            Bundle extras = mActivity.getIntent().getExtras();
             if (extras != null) {
                 String transactionInfo = extras.getString(RN_TRANSACTION_INFO);
                 if (extras.containsKey(RN_TYPE_PUSH)) {
@@ -528,23 +531,24 @@ import static com.appgate.plugin.reactnative.util.LogConstants.RN_TYPE_PUSH;
                 }
             }
 			super.onCreate(savedInstanceState);
-			
 		}
+    }
+
  }
 
  ```
 
-4. And finally get TransactionInfo Data in `constructor`method from your main `index.tsx`:
+4. And finally get TransactionInfo Data in `constructor` method from your main `index.tsx`:
 
  ```
  export default class Index extends React.Component<Props> {
  
 	constructor(props: any) {
 		if (Platform.OS === 'android') {
-	            if (this.props.RNTransactionInfo != undefined) {
-        	        this.sendTransaction(this.props.RNTransactionInfo, this.props.RNTypePush);
-            	    }
-        	}
+	       if (this.props.RNTransactionInfo != undefined) {
+        	    this.sendTransaction(this.props.RNTransactionInfo, this.props.RNTypePush);
+           }
+        }
 	}
 	
 	sendTransaction(transactionInfo: string, type: DIDTypePush) {

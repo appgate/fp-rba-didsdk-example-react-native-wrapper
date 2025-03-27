@@ -348,9 +348,20 @@ cd ../tfp-did-mobile-sdk-detectid-plugin-react-native/
 
 3. Compile library
 
+It is recommended to use `yarn`, but you can still use `npm`.
+
 ```bash
 yarn install
 ```
+
+To use `npm` execute an additional step:
+
+```bash
+npm install
+npm pack
+```
+
+That command will produce the following file: `tfp-did-mobile-sdk-detectid-plugin-react-native-1.0.0.tgz`
 
 4. Go to app folder
 
@@ -362,20 +373,26 @@ cd ../react-native-didsdk-app/
 
 ```bash
 yarn remove tfp-did-mobile-sdk-detectid-plugin-react-native
+
+npm remove tfp-did-mobile-sdk-detectid-plugin-react-native
 ```
 
 6. Add didsdk-library
 
 ```bash
 yarn add ../tfp-did-mobile-sdk-detectid-plugin-react-native
+
+npm add ../tfp-did-mobile-sdk-detectid-plugin-react-native/tfp-did-mobile-sdk-detectid-plugin-react-native-1.0.0.tgz
 ```
 
 ## Run project REACT-NATIVE
 
-Execute command yarn install to install all dependencies to react
+Install all dependencies before running React project.
 
 ```bash
 yarn install
+
+npm install
 ```
 
 Run on device or emulator
